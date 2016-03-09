@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F7C2E74C1C90264400AA18E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C2E74B1C90264400AA18E5 /* AppDelegate.swift */; };
+		F7C2E74E1C90264400AA18E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C2E74D1C90264400AA18E5 /* ViewController.swift */; };
+		F7C2E7511C90264400AA18E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C2E74F1C90264400AA18E5 /* Main.storyboard */; };
+		F7C2E7531C90264400AA18E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C2E7521C90264400AA18E5 /* Assets.xcassets */; };
+		F7C2E7561C90264400AA18E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C2E7541C90264400AA18E5 /* LaunchScreen.storyboard */; };
+		F7C2E7611C90264400AA18E5 /* SpicyChickenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C2E7601C90264400AA18E5 /* SpicyChickenTests.swift */; };
+		F7C2E76C1C90264400AA18E5 /* SpicyChickenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C2E76B1C90264400AA18E5 /* SpicyChickenUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F7C2E75D1C90264400AA18E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7C2E7401C90264400AA18E5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7C2E7471C90264400AA18E5;
+			remoteInfo = SpicyChicken;
+		};
+		F7C2E7681C90264400AA18E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7C2E7401C90264400AA18E5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7C2E7471C90264400AA18E5;
+			remoteInfo = SpicyChicken;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F7C2E7481C90264400AA18E5 /* SpicyChicken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpicyChicken.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7C2E74B1C90264400AA18E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F7C2E74D1C90264400AA18E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F7C2E7501C90264400AA18E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F7C2E7521C90264400AA18E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7C2E7551C90264400AA18E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F7C2E7571C90264400AA18E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7C2E75C1C90264400AA18E5 /* SpicyChickenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpicyChickenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7C2E7601C90264400AA18E5 /* SpicyChickenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpicyChickenTests.swift; sourceTree = "<group>"; };
+		F7C2E7621C90264400AA18E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7C2E7671C90264400AA18E5 /* SpicyChickenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpicyChickenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7C2E76B1C90264400AA18E5 /* SpicyChickenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpicyChickenUITests.swift; sourceTree = "<group>"; };
+		F7C2E76D1C90264400AA18E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7C2E7451C90264400AA18E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7C2E7591C90264400AA18E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7C2E7641C90264400AA18E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F7C2E73F1C90264400AA18E5 = {
+			isa = PBXGroup;
+			children = (
+				F7C2E74A1C90264400AA18E5 /* SpicyChicken */,
+				F7C2E75F1C90264400AA18E5 /* SpicyChickenTests */,
+				F7C2E76A1C90264400AA18E5 /* SpicyChickenUITests */,
+				F7C2E7491C90264400AA18E5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F7C2E7491C90264400AA18E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7C2E7481C90264400AA18E5 /* SpicyChicken.app */,
+				F7C2E75C1C90264400AA18E5 /* SpicyChickenTests.xctest */,
+				F7C2E7671C90264400AA18E5 /* SpicyChickenUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7C2E74A1C90264400AA18E5 /* SpicyChicken */ = {
+			isa = PBXGroup;
+			children = (
+				F7C2E74B1C90264400AA18E5 /* AppDelegate.swift */,
+				F7C2E74D1C90264400AA18E5 /* ViewController.swift */,
+				F7C2E74F1C90264400AA18E5 /* Main.storyboard */,
+				F7C2E7521C90264400AA18E5 /* Assets.xcassets */,
+				F7C2E7541C90264400AA18E5 /* LaunchScreen.storyboard */,
+				F7C2E7571C90264400AA18E5 /* Info.plist */,
+			);
+			path = SpicyChicken;
+			sourceTree = "<group>";
+		};
+		F7C2E75F1C90264400AA18E5 /* SpicyChickenTests */ = {
+			isa = PBXGroup;
+			children = (
+				F7C2E7601C90264400AA18E5 /* SpicyChickenTests.swift */,
+				F7C2E7621C90264400AA18E5 /* Info.plist */,
+			);
+			path = SpicyChickenTests;
+			sourceTree = "<group>";
+		};
+		F7C2E76A1C90264400AA18E5 /* SpicyChickenUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F7C2E76B1C90264400AA18E5 /* SpicyChickenUITests.swift */,
+				F7C2E76D1C90264400AA18E5 /* Info.plist */,
+			);
+			path = SpicyChickenUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7C2E7471C90264400AA18E5 /* SpicyChicken */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7C2E7701C90264400AA18E5 /* Build configuration list for PBXNativeTarget "SpicyChicken" */;
+			buildPhases = (
+				F7C2E7441C90264400AA18E5 /* Sources */,
+				F7C2E7451C90264400AA18E5 /* Frameworks */,
+				F7C2E7461C90264400AA18E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpicyChicken;
+			productName = SpicyChicken;
+			productReference = F7C2E7481C90264400AA18E5 /* SpicyChicken.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F7C2E75B1C90264400AA18E5 /* SpicyChickenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7C2E7731C90264400AA18E5 /* Build configuration list for PBXNativeTarget "SpicyChickenTests" */;
+			buildPhases = (
+				F7C2E7581C90264400AA18E5 /* Sources */,
+				F7C2E7591C90264400AA18E5 /* Frameworks */,
+				F7C2E75A1C90264400AA18E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7C2E75E1C90264400AA18E5 /* PBXTargetDependency */,
+			);
+			name = SpicyChickenTests;
+			productName = SpicyChickenTests;
+			productReference = F7C2E75C1C90264400AA18E5 /* SpicyChickenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F7C2E7661C90264400AA18E5 /* SpicyChickenUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7C2E7761C90264400AA18E5 /* Build configuration list for PBXNativeTarget "SpicyChickenUITests" */;
+			buildPhases = (
+				F7C2E7631C90264400AA18E5 /* Sources */,
+				F7C2E7641C90264400AA18E5 /* Frameworks */,
+				F7C2E7651C90264400AA18E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7C2E7691C90264400AA18E5 /* PBXTargetDependency */,
+			);
+			name = SpicyChickenUITests;
+			productName = SpicyChickenUITests;
+			productReference = F7C2E7671C90264400AA18E5 /* SpicyChickenUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7C2E7401C90264400AA18E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Zkuns;
+				TargetAttributes = {
+					F7C2E7471C90264400AA18E5 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					F7C2E75B1C90264400AA18E5 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = F7C2E7471C90264400AA18E5;
+					};
+					F7C2E7661C90264400AA18E5 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = F7C2E7471C90264400AA18E5;
+					};
+				};
+			};
+			buildConfigurationList = F7C2E7431C90264400AA18E5 /* Build configuration list for PBXProject "SpicyChicken" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F7C2E73F1C90264400AA18E5;
+			productRefGroup = F7C2E7491C90264400AA18E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7C2E7471C90264400AA18E5 /* SpicyChicken */,
+				F7C2E75B1C90264400AA18E5 /* SpicyChickenTests */,
+				F7C2E7661C90264400AA18E5 /* SpicyChickenUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7C2E7461C90264400AA18E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C2E7561C90264400AA18E5 /* LaunchScreen.storyboard in Resources */,
+				F7C2E7531C90264400AA18E5 /* Assets.xcassets in Resources */,
+				F7C2E7511C90264400AA18E5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7C2E75A1C90264400AA18E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7C2E7651C90264400AA18E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7C2E7441C90264400AA18E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C2E74E1C90264400AA18E5 /* ViewController.swift in Sources */,
+				F7C2E74C1C90264400AA18E5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7C2E7581C90264400AA18E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C2E7611C90264400AA18E5 /* SpicyChickenTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7C2E7631C90264400AA18E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C2E76C1C90264400AA18E5 /* SpicyChickenUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F7C2E75E1C90264400AA18E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7C2E7471C90264400AA18E5 /* SpicyChicken */;
+			targetProxy = F7C2E75D1C90264400AA18E5 /* PBXContainerItemProxy */;
+		};
+		F7C2E7691C90264400AA18E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7C2E7471C90264400AA18E5 /* SpicyChicken */;
+			targetProxy = F7C2E7681C90264400AA18E5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F7C2E74F1C90264400AA18E5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7C2E7501C90264400AA18E5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F7C2E7541C90264400AA18E5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7C2E7551C90264400AA18E5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F7C2E76E1C90264400AA18E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F7C2E76F1C90264400AA18E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F7C2E7711C90264400AA18E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SpicyChicken/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zk.SpicyChicken;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F7C2E7721C90264400AA18E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SpicyChicken/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zk.SpicyChicken;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F7C2E7741C90264400AA18E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SpicyChickenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zk.SpicyChickenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpicyChicken.app/SpicyChicken";
+			};
+			name = Debug;
+		};
+		F7C2E7751C90264400AA18E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SpicyChickenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zk.SpicyChickenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpicyChicken.app/SpicyChicken";
+			};
+			name = Release;
+		};
+		F7C2E7771C90264400AA18E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SpicyChickenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zk.SpicyChickenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SpicyChicken;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		F7C2E7781C90264400AA18E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SpicyChickenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zk.SpicyChickenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SpicyChicken;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7C2E7431C90264400AA18E5 /* Build configuration list for PBXProject "SpicyChicken" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7C2E76E1C90264400AA18E5 /* Debug */,
+				F7C2E76F1C90264400AA18E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7C2E7701C90264400AA18E5 /* Build configuration list for PBXNativeTarget "SpicyChicken" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7C2E7711C90264400AA18E5 /* Debug */,
+				F7C2E7721C90264400AA18E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F7C2E7731C90264400AA18E5 /* Build configuration list for PBXNativeTarget "SpicyChickenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7C2E7741C90264400AA18E5 /* Debug */,
+				F7C2E7751C90264400AA18E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F7C2E7761C90264400AA18E5 /* Build configuration list for PBXNativeTarget "SpicyChickenUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7C2E7771C90264400AA18E5 /* Debug */,
+				F7C2E7781C90264400AA18E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F7C2E7401C90264400AA18E5 /* Project object */;
+}
