@@ -10,26 +10,35 @@ import UIKit
 
 class ActivitiesViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  @IBOutlet weak var activitiesTable: UITableView!
+  
+  var activities = []
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
 
-        // Do any additional setup after loading the view.
-    }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+extension ActivitiesViewController: UITableViewDelegate{
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    let cell = tableView.dequeueReusableCellWithIdentifier("activityCell", forIndexPath: indexPath) as ActivityCell
+    cell.activity = activities[indexPath.section][indexPath.row]
+    return cell
+  }
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+extension ActivitiesViewController: UITableViewDataSource{
+  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    return UITableViewCell()
+  }
+  
+  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return activities[section].count
+  }
+  
+  func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    return activities.count
+  }
+  
 }
