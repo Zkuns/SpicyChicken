@@ -7,38 +7,53 @@
 //
 
 import UIKit
+import Alamofire
 
 class ActivitiesViewController: UIViewController {
 
   @IBOutlet weak var activitiesTable: UITableView!
   
-  var activities = []
+  var activities = [Activity](){
+    didSet{
+      activitiesTable.reloadData()
+    }
+  }
+  
+  private func getDate(){
+    Alamofire.request(.GET, Config.ResourceUrl.ActivityUrl).response{ request, response, data, error in
+      self.activities = JsonParse.parseActivity(data)
+    }
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    getDate()
+    
+    activitiesTable.rowHeight = UITableViewAutomaticDimension
+    activitiesTable.estimatedRowHeight = 160.0
   }
 
 }
 
 extension ActivitiesViewController: UITableViewDelegate{
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    let cell = tableView.dequeueReusableCellWithIdentifier("activityCell", forIndexPath: indexPath) as ActivityCell
-    cell.activity = activities[indexPath.section][indexPath.row]
-    return cell
+    self.performSegueWithIdentifier("showActivityDetail", sender: nil)
   }
 }
 
 extension ActivitiesViewController: UITableViewDataSource{
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    return UITableViewCell()
+    let cell = tableView.dequeueReusableCellWithIdentifier("activityCell", forIndexPath: indexPath) as! ActivityCell
+    cell.activity = activities[indexPath.row]
+    return cell
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return activities[section].count
+    return activities.count
   }
   
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    return activities.count
+    return 1
   }
   
 }
