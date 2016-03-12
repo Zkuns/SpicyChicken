@@ -21,8 +21,8 @@ protocol ChangeSubControllerDelegate{
 class ContainerViewController: UIViewController {
   
   var subviewsNavigationController = UINavigationController()
-  var defaultControllerIdentify = ""
   var currentStatus: State = .Close
+  var currentMenuItem: MenuItem?
   var animateDistance: CGFloat = 0
 
   override func viewDidLoad() {
@@ -36,10 +36,16 @@ class ContainerViewController: UIViewController {
     subviewsNavigationController.didMoveToParentViewController(self)
     subviewsNavigationController.navigationBar.hidden = true
     
+    //add menuViewController
+    let menuViewController = MenuViewController()
+    addChildViewController(menuViewController)
+    view.addSubview(menuViewController.view)
+    menuViewController.didMoveToParentViewController(self)
+    
     //add activityController
-    guard let controllerName = MenuItem.MenuItems.first else { return }
-    guard let controller = storyboard?.instantiateViewControllerWithIdentifier(controllerName.controllerName!) else { return }
-    subviewsNavigationController.pushViewController(controller, animated: false)
+//    currentMenuItem = MenuItem.MenuItems.first
+//    guard let controller = storyboard?.instantiateViewControllerWithIdentifier((currentMenuItem?.controllerName)!) else { return }
+//    subviewsNavigationController.pushViewController(controller, animated: false)
     
     //add animate gesture
     let panGesture = UIPanGestureRecognizer(target: self, action:"handlePanGesture:")
@@ -75,6 +81,7 @@ class ContainerViewController: UIViewController {
 
 extension ContainerViewController: ChangeSubControllerDelegate{
   func change(controllerName: String) {
+    
   }
 }
 

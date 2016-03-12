@@ -9,8 +9,27 @@
 import UIKit
 
 class MenuViewController: UIViewController {
+  static let menuItems: [MenuItem] = [MenuItem(controllerName: "ActivitiesViewController", imageName: "", title: "活动")]
+  
   @IBOutlet weak var menuTable: UITableView!
   var changeControllerDelegate: ChangeSubControllerDelegate?
+  var menuItem: MenuItem?
+  var currentMenuItem: MenuItem?{
+    set{
+      guard let item = menuItem else { return }
+      if(item != menuItem!){
+        menuItem = item
+        changeControllerDelegate?.change(menuItem?.controllerName ?? "")
+      }
+    }
+    get{
+      return menuItem
+    }
+  }
+  
+  override func viewDidLoad() {
+    currentMenuItem = MenuItem.MenuItems.first
+  }
 }
 
 extension MenuViewController: UITableViewDelegate{
@@ -29,6 +48,6 @@ extension MenuViewController: UITableViewDelegate{
 
 extension MenuViewController: UITableViewDataSource{
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    changeControllerDelegate?.change(MenuItem.MenuItems[indexPath.row].controllerName!)
+    menuItem = MenuViewController.menuItems[indexPath.row]
   }
 }

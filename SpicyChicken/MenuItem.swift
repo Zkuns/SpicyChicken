@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MenuItem{
+struct MenuItem: Equatable{
   var controllerName: String?
   var imageName: String?
   var title: String?
@@ -20,4 +20,8 @@ struct MenuItem{
     self.imageName = imageName
   }
   
+}
+
+func ==(lhs: MenuItem, rhs: MenuItem) -> Bool{
+  return lhs.controllerName == rhs.controllerName
 }
