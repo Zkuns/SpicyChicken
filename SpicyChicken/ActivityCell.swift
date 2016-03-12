@@ -8,12 +8,15 @@
 
 import UIKit
 import Kingfisher
+import SwiftyJSON
 
 class ActivityCell: UITableViewCell {
   var activity: Activity?{
     didSet{
-      title.text = activity?.title
-      coverImage.kf_setImageWithURL(NSURL(string: activity?.cover_url ?? "")!, placeholderImage: UIImage(named: "testActivity"))
+      title.text = activity?["title"] as? String
+      let cover_url = activity?["cover_url"] as? String
+      let nsurl = NSURL(string: (cover_url ?? ""))
+      coverImage.kf_setImageWithURL(nsurl!, placeholderImage: UIImage(named: "testActivity"))
     }
   }
   

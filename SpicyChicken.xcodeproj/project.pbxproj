@@ -16,6 +16,8 @@
 		F741ED581C913DC1000A808B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741ED571C913DC1000A808B /* Config.swift */; };
 		F741ED5A1C91D5A1000A808B /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741ED591C91D5A1000A808B /* ActivityDetailViewController.swift */; };
 		F741ED5F1C9277C2000A808B /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741ED5E1C9277C2000A808B /* MenuItem.swift */; };
+		F741ED611C929756000A808B /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741ED601C929756000A808B /* BaseModel.swift */; };
+		F741ED631C93B6CF000A808B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741ED621C93B6CF000A808B /* Location.swift */; };
 		F7C2E74C1C90264400AA18E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C2E74B1C90264400AA18E5 /* AppDelegate.swift */; };
 		F7C2E7511C90264400AA18E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C2E74F1C90264400AA18E5 /* Main.storyboard */; };
 		F7C2E7531C90264400AA18E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C2E7521C90264400AA18E5 /* Assets.xcassets */; };
@@ -53,6 +55,8 @@
 		F741ED571C913DC1000A808B /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		F741ED591C91D5A1000A808B /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
 		F741ED5E1C9277C2000A808B /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		F741ED601C929756000A808B /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		F741ED621C93B6CF000A808B /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		F7C2E7481C90264400AA18E5 /* SpicyChicken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpicyChicken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C2E74B1C90264400AA18E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7C2E7501C90264400AA18E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 			children = (
 				F741ED531C912229000A808B /* Activity.swift */,
 				F741ED5E1C9277C2000A808B /* MenuItem.swift */,
+				F741ED601C929756000A808B /* BaseModel.swift */,
+				F741ED621C93B6CF000A808B /* Location.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -377,10 +383,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F741ED541C912229000A808B /* Activity.swift in Sources */,
+				F741ED631C93B6CF000A808B /* Location.swift in Sources */,
 				F741ED4E1C911903000A808B /* ContainerViewController.swift in Sources */,
 				F741ED501C91194A000A808B /* ActivitiesViewController.swift in Sources */,
 				F741ED581C913DC1000A808B /* Config.swift in Sources */,
 				F741ED5A1C91D5A1000A808B /* ActivityDetailViewController.swift in Sources */,
+				F741ED611C929756000A808B /* BaseModel.swift in Sources */,
 				F741ED561C912F0A000A808B /* JsonParse.swift in Sources */,
 				F741ED521C911D48000A808B /* ActivityCell.swift in Sources */,
 				F741ED5F1C9277C2000A808B /* MenuItem.swift in Sources */,
