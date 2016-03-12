@@ -25,6 +25,78 @@
             </objects>
             <point key="canvasLocation" x="-435" y="274"/>
         </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="OME-Kf-260">
+            <objects>
+                <viewController id="i2r-tM-M4c" customClass="MenuViewController" customModule="SpicyChicken" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BSS-zN-RQH"/>
+                        <viewControllerLayoutGuide type="bottom" id="IU8-ib-LxG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IkN-Ki-6IN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="103" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rB0-gg-yrQ">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="103" id="5z6-11-as1" customClass="MenuCell" customModule="SpicyChicken" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="103"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5z6-11-as1" id="i5G-Xe-zE8">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="102"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nRm-EU-lHQ">
+                                                    <rect key="frame" x="432" y="16" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="nRm-EU-lHQ" secondAttribute="height" multiplier="1:1" id="hev-Os-s9k"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MtL-Qg-WaD">
+                                                    <rect key="frame" x="523" y="41" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="MtL-Qg-WaD" firstAttribute="leading" secondItem="nRm-EU-lHQ" secondAttribute="trailing" constant="21" id="Irs-tU-lPt"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="nRm-EU-lHQ" secondAttribute="bottom" constant="8" id="Ml8-Iz-Jfz"/>
+                                                <constraint firstItem="nRm-EU-lHQ" firstAttribute="top" secondItem="i5G-Xe-zE8" secondAttribute="topMargin" constant="8" id="bKX-Oe-V9z"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="MtL-Qg-WaD" secondAttribute="trailing" constant="27" id="tSW-aT-ewC"/>
+                                                <constraint firstItem="MtL-Qg-WaD" firstAttribute="centerY" secondItem="i5G-Xe-zE8" secondAttribute="centerY" id="v3P-Ak-NXL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="menuImage" destination="nRm-EU-lHQ" id="8JL-rz-Dqj"/>
+                                            <outlet property="menuTitle" destination="MtL-Qg-WaD" id="Fk5-MM-q1N"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="i2r-tM-M4c" id="CLh-gG-9xT"/>
+                                    <outlet property="delegate" destination="i2r-tM-M4c" id="jj6-P3-ian"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rB0-gg-yrQ" secondAttribute="trailing" id="Ei9-GD-BXO"/>
+                            <constraint firstItem="rB0-gg-yrQ" firstAttribute="top" secondItem="BSS-zN-RQH" secondAttribute="bottom" id="SrF-se-22N"/>
+                            <constraint firstItem="rB0-gg-yrQ" firstAttribute="leading" secondItem="IkN-Ki-6IN" secondAttribute="leading" id="Y1i-5Q-SUS"/>
+                            <constraint firstItem="rB0-gg-yrQ" firstAttribute="bottom" secondItem="IU8-ib-LxG" secondAttribute="top" id="p3r-y6-gbi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="menuTable" destination="rB0-gg-yrQ" id="FSl-2s-slC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jRK-WH-m81" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-435" y="998"/>
+        </scene>
         <!--Activities View Controller-->
         <scene sceneID="w1j-82-6L3">
             <objects>

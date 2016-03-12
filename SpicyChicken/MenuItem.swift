@@ -11,10 +11,11 @@ import Foundation
 struct MenuItem{
   var controllerName: String?
   var imageName: String?
+  var title: String?
   
-  static let MenuItems = [MenuItem(controllerName: "ActivitiesViewController", imageName: "")]
+  static let MenuItems = [MenuItem(controllerName: "ActivitiesViewController", imageName: "", title: "活动")]
   
-  init(controllerName: String, imageName: String){
+  init(controllerName: String, imageName: String, title: String){
     self.controllerName = controllerName
     self.imageName = imageName
   }
