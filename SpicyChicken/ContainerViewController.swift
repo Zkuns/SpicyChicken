@@ -13,6 +13,11 @@ enum State{
   case Close
 }
 
+protocol ChangeSubControllerDelegate{
+  func change(controllerName: String)
+}
+
+
 class ContainerViewController: UIViewController {
   
   var subviewsNavigationController = UINavigationController()
@@ -66,6 +71,11 @@ class ContainerViewController: UIViewController {
     })
   }
 
+}
+
+extension ContainerViewController: ChangeSubControllerDelegate{
+  func change(controllerName: String) {
+  }
 }
 
 extension ContainerViewController: UIGestureRecognizerDelegate{

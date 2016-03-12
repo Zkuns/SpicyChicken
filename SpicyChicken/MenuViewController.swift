@@ -10,7 +10,7 @@ import UIKit
 
 class MenuViewController: UIViewController {
   @IBOutlet weak var menuTable: UITableView!
-  
+  var changeControllerDelegate: ChangeSubControllerDelegate?
 }
 
 extension MenuViewController: UITableViewDelegate{
@@ -29,6 +29,6 @@ extension MenuViewController: UITableViewDelegate{
 
 extension MenuViewController: UITableViewDataSource{
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    
+    changeControllerDelegate?.change(MenuItem.MenuItems[indexPath.row].controllerName!)
   }
 }
