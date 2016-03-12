@@ -20,14 +20,8 @@ class ActivitiesViewController: UIViewController {
   }
   
   private func getDate(){
-//    Alamofire.request(.GET, Config.ResourceUrl.ActivityUrl).response{ request, response, data, error in
-//      self.activities = JsonParse.parseActivity(data)
-//    }
     Activity.findAll(){ data -> () in
-      data.map{ base in
-        return base as! Activity
-      }
-      self.activities = data as! [Activity]
+      self.activities = data
     }
   }
   

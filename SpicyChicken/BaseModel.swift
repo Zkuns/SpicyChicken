@@ -19,7 +19,7 @@ class BaseModel{
     self.dataSource = dataSource
   }
   
-  static func all(attrs: [String]?, sourceUrl: String?, modelName: String, callback: ([JSON])->()){
+  static func all(sourceUrl: String?, modelName: String, callback: ([JSON])->()){
     Alamofire.request(.GET, sourceUrl!).response{ request, response, data, error in
       callback(JSON(data: data!)[modelName].array!)
     }
