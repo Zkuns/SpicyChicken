@@ -15,8 +15,6 @@ class BaseModel{
   
   var dataSource: JSON?
   
-  var modelData = [String: AnyObject]()
-  
   init(dataSource: JSON?){
     self.dataSource = dataSource
   }
