@@ -37,7 +37,9 @@ class ActivitiesViewController: UIViewController {
 
 extension ActivitiesViewController: UITableViewDelegate{
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    self.performSegueWithIdentifier("showActivityDetail", sender: nil)
+    let controller = storyboard?.instantiateViewControllerWithIdentifier("ActivityDetailViewController") as! ActivityDetailViewController
+    controller.setData(activities[indexPath.row])
+    self.navigationController?.pushViewController(controller, animated: true)
   }
 }
 

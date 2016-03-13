@@ -176,17 +176,16 @@
                     </view>
                     <connections>
                         <outlet property="activitiesTable" destination="CdP-by-kun" id="fal-ra-1zk"/>
-                        <segue destination="HnR-NI-Sob" kind="showDetail" identifier="showActivityDetail" id="qIi-M6-f2V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u0U-GY-7PM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="324" y="274"/>
         </scene>
-        <!--View Controller-->
+        <!--Activity Detail View Controller-->
         <scene sceneID="n7O-8G-Bf4">
             <objects>
-                <viewController id="HnR-NI-Sob" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ActivityDetailViewController" id="HnR-NI-Sob" customClass="ActivityDetailViewController" customModule="SpicyChicken" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QYF-sD-fHd"/>
                         <viewControllerLayoutGuide type="bottom" id="Amk-cf-HBE"/>
