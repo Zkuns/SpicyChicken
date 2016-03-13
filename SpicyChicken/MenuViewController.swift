@@ -16,9 +16,8 @@ class MenuViewController: UIViewController {
   var menuItem: MenuItem?
   var currentMenuItem: MenuItem?{
     set{
-      guard let item = menuItem else { return }
-      if(item != menuItem!){
-        menuItem = item
+      if menuItem == nil || menuItem! != newValue!{
+        menuItem = newValue
         changeControllerDelegate?.change(menuItem?.controllerName ?? "")
       }
     }
@@ -28,17 +27,20 @@ class MenuViewController: UIViewController {
   }
   
   override func viewDidLoad() {
-    currentMenuItem = MenuItem.MenuItems.first
+    super.viewDidLoad()
+    currentMenuItem = MenuViewController.menuItems.first
   }
 }
 
 extension MenuViewController: UITableViewDelegate{
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return MenuItem.MenuItems.count
+    return MenuViewController.menuItems.count
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    return MenuCell()
+    let cell = tableView.dequeueReusableCellWithIdentifier("MenuCell") as! MenuCell
+    cell.setData(MenuViewController.menuItems[indexPath.row])
+    return cell
   }
   
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {

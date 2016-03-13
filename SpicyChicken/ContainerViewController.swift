@@ -21,9 +21,10 @@ protocol ChangeSubControllerDelegate{
 class ContainerViewController: UIViewController {
   
   var subviewsNavigationController = UINavigationController()
+  var menuViewController: MenuViewController!
   var currentStatus: State = .Close
   var currentMenuItem: MenuItem?
-  var animateDistance: CGFloat = 0
+  var animateDistance: CGFloat!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -37,15 +38,12 @@ class ContainerViewController: UIViewController {
     subviewsNavigationController.navigationBar.hidden = true
     
     //add menuViewController
-    let menuViewController = MenuViewController()
+    menuViewController = storyboard?.instantiateViewControllerWithIdentifier("MenuViewController") as? MenuViewController
+    menuViewController.changeControllerDelegate = self
     addChildViewController(menuViewController)
     view.addSubview(menuViewController.view)
     menuViewController.didMoveToParentViewController(self)
-    
-    //add activityController
-//    currentMenuItem = MenuItem.MenuItems.first
-//    guard let controller = storyboard?.instantiateViewControllerWithIdentifier((currentMenuItem?.controllerName)!) else { return }
-//    subviewsNavigationController.pushViewController(controller, animated: false)
+    menuViewController.view.center.x -= view.frame.width
     
     //add animate gesture
     let panGesture = UIPanGestureRecognizer(target: self, action:"handlePanGesture:")
@@ -64,6 +62,7 @@ class ContainerViewController: UIViewController {
   private func closeMenuView(){
     UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: [], animations: {
       self.subviewsNavigationController.view.center.x -= self.animateDistance
+      self.menuViewController.view.center.x -= self.animateDistance
       }, completion: { _ in
       self.currentStatus = .Close
     })
@@ -72,8 +71,10 @@ class ContainerViewController: UIViewController {
   private func openMenuView(){
     UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: [], animations: {
       self.subviewsNavigationController.view.center.x += self.animateDistance
+      self.menuViewController.view.center.x += self.animateDistance
       }, completion: { _ in
       self.currentStatus = .Open
+      print(self.menuViewController.view.frame)
     })
   }
 
@@ -81,7 +82,10 @@ class ContainerViewController: UIViewController {
 
 extension ContainerViewController: ChangeSubControllerDelegate{
   func change(controllerName: String) {
-    
+    let controller = (storyboard?.instantiateViewControllerWithIdentifier(controllerName))!
+    subviewsNavigationController.addChildViewController(controller)
+    subviewsNavigationController.view.addSubview(controller.view)
+    controller.didMoveToParentViewController(subviewsNavigationController)
   }
 }
 
@@ -90,9 +94,9 @@ extension ContainerViewController: UIGestureRecognizerDelegate{
     let x = sender.translationInView(view).x
     switch sender.state {
     case .Ended:
-      if abs(x) > 100 {
-        toggleMenuView()
-      }
+      guard abs(x) > 50 else { return }
+      if currentStatus == .Open && x < 0 { toggleMenuView() }
+      if currentStatus == .Close && x > 0 { toggleMenuView() }
     default: break;
     }
   }

@@ -13,11 +13,10 @@ struct MenuItem: Equatable{
   var imageName: String?
   var title: String?
   
-  static let MenuItems = [MenuItem(controllerName: "ActivitiesViewController", imageName: "", title: "活动")]
-  
   init(controllerName: String, imageName: String, title: String){
     self.controllerName = controllerName
     self.imageName = imageName
+    self.title = title
   }
   
 }

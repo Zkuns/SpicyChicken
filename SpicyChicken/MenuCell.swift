@@ -14,6 +14,8 @@ class MenuCell: UITableViewCell {
   @IBOutlet weak var menuImage: UIImageView!
   
   func setData(menuItem: MenuItem){
+    print(menuItem.controllerName)
+    print(menuItem.title)
     menuTitle.text = menuItem.title
     menuImage.kf_setImageWithURL(NSURL(string: menuItem.imageName ?? "")!, placeholderImage: UIImage(named: "1.pic"))
   }
