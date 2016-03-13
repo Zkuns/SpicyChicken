@@ -9,7 +9,7 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-  static let menuItems: [MenuItem] = [MenuItem(controllerName: "ActivitiesViewController", imageName: "", title: "活动")]
+  static let menuItems: [MenuItem] = [MenuItem(controllerName: "ActivitiesViewController", imageName: "", title: "活动"), MenuItem(controllerName: "TopicsViewController", imageName: "", title: "文章")]
   
   @IBOutlet weak var menuTable: UITableView!
   var changeControllerDelegate: ChangeSubControllerDelegate?
