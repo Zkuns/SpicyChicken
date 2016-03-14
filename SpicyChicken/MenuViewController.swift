@@ -16,10 +16,11 @@ class MenuViewController: UIViewController {
   var menuItem: MenuItem?
   var currentMenuItem: MenuItem?{
     set{
-      if menuItem == nil || menuItem! != newValue!{
-        menuItem = newValue
-        changeControllerDelegate?.change(menuItem?.controllerName ?? "")
-      }
+      guard (menuItem == nil || menuItem! != newValue!) else { return }
+      var up: Bool = true
+      if let menuItem = menuItem{ up = MenuViewController.menuItems.indexOf(menuItem) < MenuViewController.menuItems.indexOf(newValue!) }
+      menuItem = newValue
+      changeControllerDelegate?.change(menuItem?.controllerName ?? "", up: up)
     }
     get{
       return menuItem
@@ -50,6 +51,6 @@ extension MenuViewController: UITableViewDelegate{
 
 extension MenuViewController: UITableViewDataSource{
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    menuItem = MenuViewController.menuItems[indexPath.row]
+    currentMenuItem = MenuViewController.menuItems[indexPath.row]
   }
 }

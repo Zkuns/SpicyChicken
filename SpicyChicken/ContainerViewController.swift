@@ -14,7 +14,7 @@ enum State{
 }
 
 protocol ChangeSubControllerDelegate{
-  func change(controllerName: String)
+  func change(controllerName: String, up: Bool)
 }
 
 
@@ -74,19 +74,51 @@ class ContainerViewController: UIViewController {
       self.menuViewController.view.center.x += self.animateDistance
       }, completion: { _ in
       self.currentStatus = .Open
-      print(self.menuViewController.view.frame)
     })
   }
 
 }
 
 extension ContainerViewController: ChangeSubControllerDelegate{
-  func change(controllerName: String) {
-    let controller = (storyboard?.instantiateViewControllerWithIdentifier(controllerName))!
-    subviewsNavigationController.addChildViewController(controller)
-    subviewsNavigationController.view.addSubview(controller.view)
-    controller.didMoveToParentViewController(subviewsNavigationController)
+  func change(controllerName: String, up: Bool) {
+    let addController = (storyboard?.instantiateViewControllerWithIdentifier(controllerName))!
+    let removeController = subviewsNavigationController.topViewController
+    if let removeController = removeController {
+      subviewsNavigationController.addChildViewController(addController)
+      subviewsNavigationController.view.addSubview(addController.view)
+      addController.didMoveToParentViewController(subviewsNavigationController)
+      moveAnimate(addController, removeController: removeController, up: up, duration: 1, voffset: 100)
+    } else {
+      subviewsNavigationController.viewControllers = [addController]
+    }
   }
+  
+  func moveAnimate(addController: UIViewController, removeController: UIViewController, up: Bool, duration: Double, voffset: CGFloat) {
+    let hoffset = view.frame.height
+    addController.view.center.x += voffset
+    addController.view.center.y += up ? hoffset : -hoffset
+    UIView.animateKeyframesWithDuration(duration, delay: 0, options: [], animations: {
+      UIView.addKeyframeWithRelativeStartTime(0, relativeDuration: 0.2, animations: {
+        removeController.view.center.x += voffset
+      })
+      UIView.addKeyframeWithRelativeStartTime(0.21, relativeDuration: 0.6, animations: {
+        removeController.view.center.y += up ? -hoffset : hoffset
+      })
+      UIView.addKeyframeWithRelativeStartTime(0.21, relativeDuration: 0.6, animations: {
+        addController.view.center.y += up ? -hoffset : hoffset
+      })
+      UIView.addKeyframeWithRelativeStartTime(0.82, relativeDuration: 0.09, animations: {
+        addController.view.center.x -= voffset
+      })
+      UIView.addKeyframeWithRelativeStartTime(0.91, relativeDuration: 0.09 , animations: {
+        self.subviewsNavigationController.view.center.x -= self.animateDistance
+        self.menuViewController.view.center.x -= self.animateDistance
+      })
+    }, completion: {_ in
+      self.currentStatus = .Close
+    })
+  }
+  
 }
 
 extension ContainerViewController: UIGestureRecognizerDelegate{

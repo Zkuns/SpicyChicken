@@ -20,9 +20,9 @@ class TopicsViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    Topic.findAll({ topics in
-      self.topics = topics
-    })
+//    Topic.findAll({ topics in
+//      self.topics = topics
+//    })
   }
 
 }
