@@ -19,7 +19,8 @@ class BaseModel{
     self.dataSource = dataSource
   }
   
-  static func all(attrs: [String]?, sourceUrl: String?, modelName: String, callback: ([JSON])->()){
+  //看看能不能将类转化为参数传入，让它在basemodel中直接转化为子类
+  static func all(sourceUrl: String?, modelName: String, callback: ([JSON])->()){
     Alamofire.request(.GET, sourceUrl!).response{ request, response, data, error in
       callback(JSON(data: data!)[modelName].array!)
     }

@@ -25,6 +25,79 @@
             </objects>
             <point key="canvasLocation" x="-435" y="274"/>
         </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="OME-Kf-260">
+            <objects>
+                <viewController storyboardIdentifier="MenuViewController" automaticallyAdjustsScrollViewInsets="NO" id="i2r-tM-M4c" customClass="MenuViewController" customModule="SpicyChicken" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BSS-zN-RQH"/>
+                        <viewControllerLayoutGuide type="bottom" id="IU8-ib-LxG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IkN-Ki-6IN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="103" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rB0-gg-yrQ">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCell" rowHeight="103" id="5z6-11-as1" customClass="MenuCell" customModule="SpicyChicken" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="103"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5z6-11-as1" id="i5G-Xe-zE8">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="102"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nRm-EU-lHQ">
+                                                    <rect key="frame" x="459" y="16" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="nRm-EU-lHQ" secondAttribute="height" multiplier="1:1" id="hev-Os-s9k"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MtL-Qg-WaD">
+                                                    <rect key="frame" x="550" y="41" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="MtL-Qg-WaD" firstAttribute="leading" secondItem="nRm-EU-lHQ" secondAttribute="trailing" constant="21" id="Irs-tU-lPt"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="nRm-EU-lHQ" secondAttribute="bottom" constant="8" id="Ml8-Iz-Jfz"/>
+                                                <constraint firstItem="nRm-EU-lHQ" firstAttribute="top" secondItem="i5G-Xe-zE8" secondAttribute="topMargin" constant="8" id="bKX-Oe-V9z"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="MtL-Qg-WaD" secondAttribute="trailing" id="tSW-aT-ewC"/>
+                                                <constraint firstItem="MtL-Qg-WaD" firstAttribute="centerY" secondItem="i5G-Xe-zE8" secondAttribute="centerY" id="v3P-Ak-NXL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.21960784310000001" green="0.47058823529999999" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="menuImage" destination="nRm-EU-lHQ" id="8JL-rz-Dqj"/>
+                                            <outlet property="menuTitle" destination="MtL-Qg-WaD" id="Fk5-MM-q1N"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="i2r-tM-M4c" id="CLh-gG-9xT"/>
+                                    <outlet property="delegate" destination="i2r-tM-M4c" id="jj6-P3-ian"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rB0-gg-yrQ" secondAttribute="trailing" id="Ei9-GD-BXO"/>
+                            <constraint firstItem="rB0-gg-yrQ" firstAttribute="top" secondItem="BSS-zN-RQH" secondAttribute="bottom" id="SrF-se-22N"/>
+                            <constraint firstItem="rB0-gg-yrQ" firstAttribute="leading" secondItem="IkN-Ki-6IN" secondAttribute="leading" id="Y1i-5Q-SUS"/>
+                            <constraint firstItem="rB0-gg-yrQ" firstAttribute="bottom" secondItem="IU8-ib-LxG" secondAttribute="top" id="p3r-y6-gbi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="menuTable" destination="rB0-gg-yrQ" id="FSl-2s-slC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jRK-WH-m81" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1128" y="274"/>
+        </scene>
         <!--Activities View Controller-->
         <scene sceneID="w1j-82-6L3">
             <objects>
@@ -103,17 +176,102 @@
                     </view>
                     <connections>
                         <outlet property="activitiesTable" destination="CdP-by-kun" id="fal-ra-1zk"/>
-                        <segue destination="HnR-NI-Sob" kind="showDetail" identifier="showActivityDetail" id="qIi-M6-f2V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u0U-GY-7PM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="324" y="274"/>
         </scene>
-        <!--View Controller-->
+        <!--Topics View Controller-->
+        <scene sceneID="1a6-Hx-OuC">
+            <objects>
+                <viewController storyboardIdentifier="TopicsViewController" id="0ua-wW-eOe" customClass="TopicsViewController" customModule="SpicyChicken" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4qa-BW-trw"/>
+                        <viewControllerLayoutGuide type="bottom" id="l0M-7y-DRn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8gL-Zx-zq5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="319" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CR0-6K-Jg1">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" red="0.21960784310000001" green="0.47058823529999999" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopicCell" rowHeight="319" id="Pov-jY-u65" customClass="TopicCell" customModule="SpicyChicken" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="319"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pov-jY-u65" id="ykB-wl-6yg">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="318"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Crk-Te-9yW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="232"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6C-bS-WAw">
+                                                    <rect key="frame" x="8" y="240" width="584" height="26"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sg8-fM-gwi">
+                                                    <rect key="frame" x="8" y="274" width="584" height="44"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CR0-6K-Jg1" firstAttribute="top" secondItem="4qa-BW-trw" secondAttribute="bottom" id="ELt-a3-FVl"/>
+                            <constraint firstItem="CR0-6K-Jg1" firstAttribute="bottom" secondItem="l0M-7y-DRn" secondAttribute="top" id="L5W-mY-PKN"/>
+                            <constraint firstItem="CR0-6K-Jg1" firstAttribute="leading" secondItem="8gL-Zx-zq5" secondAttribute="leading" id="sYQ-6V-Apg"/>
+                            <constraint firstAttribute="trailing" secondItem="CR0-6K-Jg1" secondAttribute="trailing" id="zM3-9l-ecl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="topicsTable" destination="CR0-6K-Jg1" id="U2l-yD-kgD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PBJ-Ef-iKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="324" y="994"/>
+        </scene>
+        <!--Topic Detail View Controller-->
+        <scene sceneID="1tw-tr-eoB">
+            <objects>
+                <viewController storyboardIdentifier="TopicDetailViewController" id="6VJ-Vx-KgI" customClass="TopicDetailViewController" customModule="SpicyChicken" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eFG-tO-AbT"/>
+                        <viewControllerLayoutGuide type="bottom" id="DiD-Hx-eTY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x6O-oX-Kms">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="topic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mof-4W-2NQ">
+                                <rect key="frame" x="17" y="20" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tKE-Jo-UVH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1158" y="994"/>
+        </scene>
+        <!--Activity Detail View Controller-->
         <scene sceneID="n7O-8G-Bf4">
             <objects>
-                <viewController id="HnR-NI-Sob" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ActivityDetailViewController" id="HnR-NI-Sob" customClass="ActivityDetailViewController" customModule="SpicyChicken" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QYF-sD-fHd"/>
                         <viewControllerLayoutGuide type="bottom" id="Amk-cf-HBE"/>

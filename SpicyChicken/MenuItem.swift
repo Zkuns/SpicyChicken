@@ -8,15 +8,19 @@
 
 import Foundation
 
-struct MenuItem{
+struct MenuItem: Equatable{
   var controllerName: String?
   var imageName: String?
+  var title: String?
   
-  static let MenuItems = [MenuItem(controllerName: "ActivitiesViewController", imageName: "")]
-  
-  init(controllerName: String, imageName: String){
+  init(controllerName: String, imageName: String, title: String){
     self.controllerName = controllerName
     self.imageName = imageName
+    self.title = title
   }
   
+}
+
+func ==(lhs: MenuItem, rhs: MenuItem) -> Bool{
+  return lhs.controllerName == rhs.controllerName
 }

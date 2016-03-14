@@ -18,6 +18,12 @@
 		F741ED5F1C9277C2000A808B /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741ED5E1C9277C2000A808B /* MenuItem.swift */; };
 		F741ED611C929756000A808B /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741ED601C929756000A808B /* BaseModel.swift */; };
 		F741ED631C93B6CF000A808B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741ED621C93B6CF000A808B /* Location.swift */; };
+		F741ED651C93F4A6000A808B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741ED641C93F4A6000A808B /* MenuViewController.swift */; };
+		F741ED671C93F510000A808B /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741ED661C93F510000A808B /* MenuCell.swift */; };
+		F741ED691C955AEC000A808B /* TopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741ED681C955AEC000A808B /* TopicsViewController.swift */; };
+		F741ED6B1C95661A000A808B /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741ED6A1C95661A000A808B /* Topic.swift */; };
+		F741ED6D1C9568CB000A808B /* TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741ED6C1C9568CB000A808B /* TopicCell.swift */; };
+		F741ED6F1C956A9E000A808B /* TopicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741ED6E1C956A9E000A808B /* TopicDetailViewController.swift */; };
 		F7C2E74C1C90264400AA18E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C2E74B1C90264400AA18E5 /* AppDelegate.swift */; };
 		F7C2E7511C90264400AA18E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C2E74F1C90264400AA18E5 /* Main.storyboard */; };
 		F7C2E7531C90264400AA18E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C2E7521C90264400AA18E5 /* Assets.xcassets */; };
@@ -57,6 +63,12 @@
 		F741ED5E1C9277C2000A808B /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		F741ED601C929756000A808B /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		F741ED621C93B6CF000A808B /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		F741ED641C93F4A6000A808B /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		F741ED661C93F510000A808B /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		F741ED681C955AEC000A808B /* TopicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsViewController.swift; sourceTree = "<group>"; };
+		F741ED6A1C95661A000A808B /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
+		F741ED6C1C9568CB000A808B /* TopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicCell.swift; sourceTree = "<group>"; };
+		F741ED6E1C956A9E000A808B /* TopicDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicDetailViewController.swift; sourceTree = "<group>"; };
 		F7C2E7481C90264400AA18E5 /* SpicyChicken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpicyChicken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C2E74B1C90264400AA18E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7C2E7501C90264400AA18E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -121,6 +133,7 @@
 				F741ED5E1C9277C2000A808B /* MenuItem.swift */,
 				F741ED601C929756000A808B /* BaseModel.swift */,
 				F741ED621C93B6CF000A808B /* Location.swift */,
+				F741ED6A1C95661A000A808B /* Topic.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -131,6 +144,9 @@
 				F741ED4D1C911903000A808B /* ContainerViewController.swift */,
 				F741ED4F1C91194A000A808B /* ActivitiesViewController.swift */,
 				F741ED591C91D5A1000A808B /* ActivityDetailViewController.swift */,
+				F741ED641C93F4A6000A808B /* MenuViewController.swift */,
+				F741ED681C955AEC000A808B /* TopicsViewController.swift */,
+				F741ED6E1C956A9E000A808B /* TopicDetailViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -139,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				F741ED511C911D48000A808B /* ActivityCell.swift */,
+				F741ED661C93F510000A808B /* MenuCell.swift */,
+				F741ED6C1C9568CB000A808B /* TopicCell.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -383,13 +401,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				F741ED541C912229000A808B /* Activity.swift in Sources */,
+				F741ED6B1C95661A000A808B /* Topic.swift in Sources */,
 				F741ED631C93B6CF000A808B /* Location.swift in Sources */,
 				F741ED4E1C911903000A808B /* ContainerViewController.swift in Sources */,
+				F741ED6F1C956A9E000A808B /* TopicDetailViewController.swift in Sources */,
 				F741ED501C91194A000A808B /* ActivitiesViewController.swift in Sources */,
 				F741ED581C913DC1000A808B /* Config.swift in Sources */,
 				F741ED5A1C91D5A1000A808B /* ActivityDetailViewController.swift in Sources */,
+				F741ED691C955AEC000A808B /* TopicsViewController.swift in Sources */,
 				F741ED611C929756000A808B /* BaseModel.swift in Sources */,
+				F741ED6D1C9568CB000A808B /* TopicCell.swift in Sources */,
+				F741ED651C93F4A6000A808B /* MenuViewController.swift in Sources */,
 				F741ED561C912F0A000A808B /* JsonParse.swift in Sources */,
+				F741ED671C93F510000A808B /* MenuCell.swift in Sources */,
 				F741ED521C911D48000A808B /* ActivityCell.swift in Sources */,
 				F741ED5F1C9277C2000A808B /* MenuItem.swift in Sources */,
 				F7C2E74C1C90264400AA18E5 /* AppDelegate.swift in Sources */,
