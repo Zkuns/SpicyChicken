@@ -51,32 +51,15 @@ class ContainerViewController: UIViewController {
   }
   
   func toggleMenuView(){
-    switch currentStatus{
-    case .Open:
-      closeMenuView()
-    case .Close:
-      openMenuView()
-    }
-  }
-  
-  private func closeMenuView(){
+    let distance = self.animateDistance * (currentStatus == .Close ? -1 : 1)
     UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: [], animations: {
-      self.subviewsNavigationController.view.center.x -= self.animateDistance
-      self.menuViewController.view.center.x -= self.animateDistance
+      self.subviewsNavigationController.view.center.x += distance
+      self.menuViewController.view.center.x += distance
       }, completion: { _ in
-      self.currentStatus = .Close
+        self.currentStatus = (self.currentStatus == .Close) ? .Open : .Close
     })
   }
   
-  private func openMenuView(){
-    UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: [], animations: {
-      self.subviewsNavigationController.view.center.x += self.animateDistance
-      self.menuViewController.view.center.x += self.animateDistance
-      }, completion: { _ in
-      self.currentStatus = .Open
-    })
-  }
-
 }
 
 extension ContainerViewController: ChangeSubControllerDelegate{
@@ -94,7 +77,7 @@ extension ContainerViewController: ChangeSubControllerDelegate{
   }
   
   func moveAnimate(addController: UIViewController, removeController: UIViewController, up: Bool, duration: Double, voffset: CGFloat) {
-    let hoffset = view.frame.height
+    let hoffset = view.frame.height + 100
     addController.view.center.x += voffset
     addController.view.center.y += up ? hoffset : -hoffset
     UIView.animateKeyframesWithDuration(duration, delay: 0, options: [], animations: {
