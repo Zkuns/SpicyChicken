@@ -13,12 +13,7 @@ class Topic: BaseModel{
   static var allData = [Activity]()
   
   static func findAll(callback: ([Topic])->()){
-    all(Config.ResourceUrl.TopicUrl, modelName: self.modelName){ data in
-      let topics = data.map{ data in
-        Topic(dataSource: data)
-      }
-      callback(topics)
-    }
+//    all(Config.ResourceUrl.TopicUrl, modelName: self.modelName, callback: callback)
   }
   
 }

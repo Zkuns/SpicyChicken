@@ -20,7 +20,7 @@ class ActivitiesViewController: UIViewController {
   }
   
   private func getDate(){
-    Activity.findAll(){ data -> () in
+    Activity.findAll(Config.ResourceUrl.ActivityUrl, modelName: "activities"){ (data: [Activity]) -> () in
       self.activities = data
     }
   }

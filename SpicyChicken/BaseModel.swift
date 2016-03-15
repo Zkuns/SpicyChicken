@@ -15,14 +15,16 @@ class BaseModel{
   
   var dataSource: JSON?
   
-  init(dataSource: JSON?){
+  required init(dataSource: JSON?){
     self.dataSource = dataSource
   }
   
-  //看看能不能将类转化为参数传入，让它在basemodel中直接转化为子类
-  static func all(sourceUrl: String?, modelName: String, callback: ([JSON])->()){
+  static func findAll<T: BaseModel>(sourceUrl: String?, modelName: String, callback: ([T])->()){
     Alamofire.request(.GET, sourceUrl!).response{ request, response, data, error in
-      callback(JSON(data: data!)[modelName].array!)
+      let Ts = JSON(data: data!)[modelName].array!.map{ ele in
+        return T(dataSource: ele)
+      }
+      callback(Ts)
     }
   }
   
@@ -32,7 +34,7 @@ class BaseModel{
         //当是一对多的时候返回数组
         return modelArray
       } else if let column = dataSource?[attrName].string{
-        //当是一个属性的时候返回一个数组
+        //当是一个属性的时候返回一个字符串
         return column
       }else if let model = dataSource?[attrName]{
         //当是一对一的时候返回一个JSON对象
